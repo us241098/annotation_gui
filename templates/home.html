@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript">
+window.onload = startInterval;
+function startInterval()
+{
+    setInterval("startTime();",1000);
+}
+
+function startTime()
+{
+   $('#customers').load(document.URL +  ' #customers');
+}
+</script>
+
+
+  <h1 class="center">Realtime Readings Dashboard</h1>
+  <table id="customers" class="center">
+    <tr>
+      <th align="center" >Sensor-ID</th>
+      <th align="center" >Status</th>
+	<th align="center" >timestamp</th>
+    </tr>
+    {% for s in sensor %}
+    <tr>
+      <td align="center" >{{ s }}</td>
+      <td align="center" id="yo">{{ readings[s] }}</td>
+	<td align="center" >{{ timestamp[s] }}</td>
+    </tr>
+
+    {% endfor %}
+  </table>
+<button onclick="myFunction()">Reload page</button>
+<button id="MyButton" class="btn btn-warning">Refresh</button>
+{% endblock content %}

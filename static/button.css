@@ -1,0 +1,93 @@
+@import "https://fonts.googleapis.com/css?family=Source Sans Pro:500,300,100";
+
+* {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-weight: 300;
+	color: #666;
+}
+
+.buttons-wrapper {
+	max-width: 400px;
+	background: #f5f5f5;
+	border: 1px solid grey;
+	margin: 0 auto;
+	padding: 25px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+button {
+	cursor: pointer;
+	border: 0;
+	border-radius: 4px;
+	color: white;
+	height: 35px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24);
+	padding-left: 10px;
+	padding-right: 18px;
+	margin: 3px 4px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	transition: all 0.1s;
+}
+
+button.lab {
+	background-color: #285760;
+}
+
+button.office {
+	background-color: #92bd3b;
+}
+
+button.housing {
+	background-color: #3778bc;
+}
+
+button.classroom {
+	background-color: #3EA0B7;
+}
+
+button.community {
+	background-color: #007d47;
+}
+
+button:hover {
+	transform: scale(1.08);
+	transition: transform 0.1s;
+}
+
+button:focus {
+	outline: 0;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.48);
+}
+
+button span.icon {
+	color: #bababa;
+	margin-right: 10px;
+	font-size: 22px;
+	font-weight: 100;
+	transform: rotate(45deg);
+	transition: transform 0.3s;
+}
+
+button span.text {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+button[aria-pressed="false"] {
+	background: transparent;
+	box-shadow: unset;
+	border: 0;
+	color: #a5a5a5;
+}
+
+button[aria-pressed="false"] span.icon {
+	transform: rotate(-90deg);
+	transition: all 0.3s;
+}
